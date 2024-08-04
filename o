@@ -1,0 +1,17 @@
+[33mcommit 6230e10f1e8b5afb44970bf2ae5f5bebd1f07a19[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m)[m
+Author: Ivan_K <ikalinov1989yandex.ru>
+Date:   Mon Jul 29 20:42:56 2024 +0400
+
+    Add types annotation + docstrings
+
+[33mcommit 72f3c2fd1f686fa2f2e3e3c0e333ddacf2a5fe10[m
+Author: Ivan_K <ikalinov1989yandex.ru>
+Date:   Mon Jul 29 20:32:44 2024 +0400
+
+    Add func mask_account_card + get_date
+
+[33mcommit fe8f22adbbbc6c2f20c918646d959b533b045a8e[m
+Author: Ivan_K <ikalinov1989yandex.ru>
+Date:   Mon Jul 29 20:28:18 2024 +0400
+
+    Add module + gitignore
