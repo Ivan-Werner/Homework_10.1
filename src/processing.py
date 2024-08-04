@@ -5,4 +5,4 @@ def filter_by_state(operations_list: list, state='EXECUTED') -> list:
         for k, v in operation.items():
             if v == state:
                 res.append(operation)
-    return res
+    return
