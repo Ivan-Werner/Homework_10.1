@@ -1,11 +1,11 @@
 def filter_by_state(operations_list: list, state: str = 'EXECUTED') -> list:
     """Возвращает список словарей, ключ которых соответствует указанному значению"""
-    res = []
+    res_list = []
     for operation in operations_list:
         for k, v in operation.items():
             if v == state:
-                res.append(operation)
-    return res
+                res_list.append(operation)
+    return res_list
 
 
 def sort_by_date(operations_list: list, des_order: bool = True) -> list:
