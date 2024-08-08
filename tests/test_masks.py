@@ -23,3 +23,4 @@ def test_get_mask_account_empty(num_bill_empty):
 
 def test_get_mask_account_wrong(num_bill_wrong):
     assert get_mask_account('736541084301A') == num_bill_wrong
+
