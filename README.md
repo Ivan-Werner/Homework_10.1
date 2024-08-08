@@ -26,12 +26,17 @@ pip install -r requirements.txt
 * masks
 * widget
 * processing 
+* generators
 ### Сформирован отчет о покрытии кода.
 
 ```
 jetbrains://pycharm/navigate/reference?project=Homework_10.1&path=.coverage
 ```
-
+### Обновление 11.1:
+* Добавлен модуль generators, содержащий функции - генераторы
+* Проведено тестирование функций модуля
+* Добавлен файл requirements.txt
+* Сформирован отчет о покрытии кода
 
 ## Документация:
 
