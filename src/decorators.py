@@ -21,16 +21,12 @@ def log(filename=None):
         return wrapper
     return decorator
 
+
 @log()
 @log(filename="mylog.txt")
 def my_function(x, y):
     """Функция, складывающая два числа"""
     return x + y
 
+
 print(my_function(1, 2))
-
-
-
-
-
-
