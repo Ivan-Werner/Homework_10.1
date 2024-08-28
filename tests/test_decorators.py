@@ -1,7 +1,4 @@
-import pytest
 from src.decorators import log, my_function
-
-
 
 def test_log():
     @log()
@@ -16,4 +13,3 @@ def test_log_output(capsys):
     my_function(1, 2)
     captured = capsys.readouterr()
     assert captured.out == "Function start working.\nFunction finish working.\n\n"
-

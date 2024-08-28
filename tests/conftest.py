@@ -54,6 +54,7 @@ def same_date():
             {'id': 615064591, 'state': 'CANCELED', 'date': '2019-07-03T18:35:29.419441'},
             {'id': 594226727, 'state': 'CANCELED', 'date': '2019-07-03T18:35:29.241689'}]
 
+
 @pytest.fixture
 def transactions_fix():
     transactions = [
@@ -106,6 +107,6 @@ def transactions_fix():
     return transactions
 
 
-
-
-
+@pytest.fixture
+def operations_data_empty_fix():
+    return []
