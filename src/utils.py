@@ -23,6 +23,7 @@ def operations_data(operations_path: str) -> list:
         logger.error("Ошибка: файл не найден или файл пустой")
         data = []
 
+
     if data == [] or type(data) != list:
         logger.error("JSON - файл является пустым списком или не является списком")
         return []
