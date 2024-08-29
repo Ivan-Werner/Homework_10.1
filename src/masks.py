@@ -15,7 +15,7 @@ def get_mask_card_number(card_num: str) -> str:
     """Возвращает маску номера карты по правилу по правилу XXXX XX** **** XXXX"""
 
     if len(card_num) == 16 and card_num.isdigit():
-        logger.info("Вывод маскированного номера карты")
+        logger.info("Выводится маскированный номера карты")
         return card_num[:4] + " " + card_num[4:6] + "** **** " + card_num[-4:]
     else:
         logger.error(f"Неверный номер карты {card_num}")
@@ -28,7 +28,7 @@ logger.info("Запрос номера счета")
 def get_mask_account(bill_num: str) -> str:
     """Возвращает маску номера счета по правилу **XXXX"""
     if len(bill_num) == 20 and bill_num.isdigit():
-        logger.info("Вывод маскированного номера счета")
+        logger.info("Выводится маскированный номера счета")
         return "**" + bill_num[-4:]
     else:
         logger.error(f"Неверный номер счета {bill_num}")
