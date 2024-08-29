@@ -41,7 +41,7 @@ def convert_to_rub(transaction: dict) -> float:
     code = transaction["operationAmount"]["currency"]["code"]
     amount = transaction["operationAmount"]["amount"]
     if code == "RUB":
-        return amount
+        return float(amount)
     else:
         url = f"https://api.apilayer.com/fixer/convert?to=RUB&from={code}&amount={amount}"
         token = os.getenv("API_KEY")
@@ -49,8 +49,9 @@ def convert_to_rub(transaction: dict) -> float:
         response = requests.get(url, headers=headers)
         if response.status_code != 200:
             raise RuntimeError
-        return response.json()["result"]
+        return float(response.json()["result"])
 
 
 if __name__ == "__main__":
     print(convert_to_rub(test_transaction_usd))
+    print(type(convert_to_rub(test_transaction_usd)))

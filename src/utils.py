@@ -10,8 +10,9 @@ def operations_data(operations_path: str) -> list:
     try:
         with open(operations_path, encoding='utf-8') as f:
             data = json.load(f)
-    except FileNotFoundError:
+    except (FileNotFoundError, json.JSONDecodeError):
         data = []
+
     if data == [] or type(data) != list:
         return []
     else:
