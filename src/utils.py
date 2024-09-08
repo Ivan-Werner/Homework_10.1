@@ -1,13 +1,15 @@
 import logging
 import os
 import json
-from config import DATA_DIR
+from config import DATA_DIR, LOG_DIR
 
 operations_path = os.path.join(DATA_DIR, "operations.json")
+utils_log_path = os.path.join(LOG_DIR, "utils.log")
 
 logger = logging.getLogger("utils")
 logger.setLevel(logging.DEBUG)
-file_handler = logging.FileHandler("..\\logs\\utils.log", mode='w+')
+# file_handler = logging.FileHandler("..\\logs\\utils.log", mode='w+')
+file_handler = logging.FileHandler(utils_log_path, mode='w+')
 file_formatter = logging.Formatter("%(asctime)s - %(filename)s - %(levelname)s : %(message)s")
 file_handler.setFormatter(file_formatter)
 logger.addHandler(file_handler)

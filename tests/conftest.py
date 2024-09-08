@@ -1,4 +1,5 @@
 import pytest
+import pandas as pd
 
 
 @pytest.fixture
@@ -110,3 +111,38 @@ def transactions_fix():
 @pytest.fixture
 def operations_data_empty_fix():
     return []
+
+@pytest.fixture
+def wrong_transaction_csv():
+    return []
+
+
+@pytest.fixture
+def wrong_transaction_excel():
+    return []
+
+
+@pytest.fixture
+def test_df():
+    test_dict = {
+        "id": [650703.0, 3598919.0],
+
+        "state": ["EXECUTED", "EXECUTED"],
+
+        "date": ["2023-09-05T11:30:32Z", "2020-12-06T23:00:58Z"],
+
+        "amount": [16210.0, 29740.0],
+
+        "currency_name": ["Sol", "Peso"],
+
+        "currency_code": ["PEN", "COP"],
+
+        "from": ["Bill 58803664561298323391", "Discover 3172601889670065"],
+
+        "to": ["Bill 39745660563456619397", "Discover 0720428384694643"],
+
+        "description": ["Transaction org", "Card to card"]
+    }
+    return pd.DataFrame(test_dict)
+
+
