@@ -8,8 +8,7 @@ utils_log_path = os.path.join(LOG_DIR, "utils.log")
 
 logger = logging.getLogger("utils")
 logger.setLevel(logging.DEBUG)
-# file_handler = logging.FileHandler("..\\logs\\utils.log", mode='w+')
-file_handler = logging.FileHandler(utils_log_path, mode='w+')
+file_handler = logging.FileHandler(utils_log_path, mode='w+', encoding='utf-8')
 file_formatter = logging.Formatter("%(asctime)s - %(filename)s - %(levelname)s : %(message)s")
 file_handler.setFormatter(file_formatter)
 logger.addHandler(file_handler)
@@ -32,6 +31,7 @@ def operations_data(operations_path: str) -> list:
     else:
         logger.info("Вывод данных о транзакциях")
         return data
+
 
 
 if __name__ == "__main__":

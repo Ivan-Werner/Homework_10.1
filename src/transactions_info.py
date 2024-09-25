@@ -1,3 +1,5 @@
+
+
 import csv
 import os
 import pandas as pd
@@ -11,9 +13,9 @@ transactions_path_excel = os.path.join(DATA_DIR, "transactions_excel.xlsx")
 
 
 def get_transactions_from_csv(transactions_path: str) -> list:
-    """Ïîëó÷àåì äàííûå î òðàíçàêöèÿõ â âèäå ñïèñêà ñëîâàðåé èç CSV-ôàéëà"""
+    """ÐŸÐ¾Ð»ÑƒÑ‡Ð°ÐµÐ¼ Ð´Ð°Ð½Ð½Ñ‹Ðµ Ð¾ Ñ‚Ñ€Ð°Ð½Ð·Ð°ÐºÑ†Ð¸ÑÑ… Ð² Ð²Ð¸Ð´Ðµ ÑÐ¿Ð¸ÑÐºÐ° ÑÐ»Ð¾Ð²Ð°Ñ€ÐµÐ¹ Ð¸Ð· CSV-Ñ„Ð°Ð¹Ð»Ð°"""
     try:
-        with open(transactions_path) as file:
+        with open(transactions_path, encoding='utf-8') as file:
             transactions_list = []
             py_file = csv.DictReader(file, delimiter=";")
             for row in py_file:
@@ -23,7 +25,7 @@ def get_transactions_from_csv(transactions_path: str) -> list:
         return []
 
 def get_transactions_from_xlsx(transactions_path_excel: str) -> list:
-    """Ïîëó÷àåì äàííûå î òðàíçàêöèÿõ â âèäå ñïèñêà ñëîâàðåé èç Excel-ôàéëà"""
+    """ÐŸÐ¾Ð»ÑƒÑ‡Ð°ÐµÐ¼ Ð´Ð°Ð½Ð½Ñ‹Ðµ Ð¾ Ñ‚Ñ€Ð°Ð½Ð·Ð°ÐºÑ†Ð¸ÑÑ… Ð² Ð²Ð¸Ð´Ðµ ÑÐ¿Ð¸ÑÐºÐ° ÑÐ»Ð¾Ð²Ð°Ñ€ÐµÐ¹ Ð¸Ð· Excel-Ñ„Ð°Ð¹Ð»Ð°"""
     try:
         py_file = pd.read_excel(transactions_path_excel)
         py_dict = py_file.to_dict(orient='records')
@@ -35,4 +37,4 @@ def get_transactions_from_xlsx(transactions_path_excel: str) -> list:
 
 if __name__ == '__main__':
     print(get_transactions_from_csv(transactions_path))
-    # print(get_transactions_from_xlsx(transactions_path_excel))
+    #print(get_transactions_from_xlsx(transactions_path_excel))
