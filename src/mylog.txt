@@ -1,0 +1,2 @@
+Error: unsupported operand type(s) for +: 'int' and 'str'. Arguments: (1, '2'), {}Function start working.
+Function finish working.
