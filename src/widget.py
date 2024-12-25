@@ -25,5 +25,6 @@ def get_date(date: str) -> str:
 
 
 if __name__ == '__main__':
-    print(mask_account_card('Maestro 1596837868705199'))
+    print(mask_account_card('Счет 76145988629288763144'))
+
     print(get_date('2024-03-11T02:26:18.671407'))

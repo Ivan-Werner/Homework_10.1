@@ -36,5 +36,5 @@ def get_transactions_from_xlsx(transactions_path_excel: str) -> list:
 
 
 if __name__ == '__main__':
-    print(get_transactions_from_csv(transactions_path))
-    #print(get_transactions_from_xlsx(transactions_path_excel))
+    #print(get_transactions_from_csv(transactions_path))
+    print(get_transactions_from_xlsx(transactions_path_excel))
