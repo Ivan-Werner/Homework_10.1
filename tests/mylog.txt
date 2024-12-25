@@ -1,0 +1,19 @@
+Function start working.
+Function finish working.Error: my_function() missing 2 required positional arguments: 'x' and 'y'. Arguments: (), {}Function start working.
+Function finish working.Function start working.
+Function finish working.Function start working.
+Function finish working.Function start working.
+Function finish working.Function start working.
+Function finish working.Function start working.
+Function finish working.Error: unsupported operand type(s) for +: 'int' and 'str'. Arguments: (1, '2'), {}Function start working.
+Function finish working.
+Function start working.
+Function finish working.
+Function start working.
+Function finish working.
+Function start working.
+Function finish working.
+Function start working.
+Function finish working.
+Function start working.
+Function finish working.
