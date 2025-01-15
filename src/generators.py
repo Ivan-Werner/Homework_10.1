@@ -4,6 +4,7 @@ def filter_by_currency(transactions: list, currency_code: str):
         iter_operations = (
             transaction for transaction in transactions
             if transaction.get("operationAmount").get("currency").get("code") == currency_code)
+
         return iter_operations
     else:
         return "Введен пустой список."
@@ -109,15 +110,18 @@ transactions = (
     ]
 )
 
+transactions_empty = ([])
 
 if __name__ == '__main__':
-    usd_transactions = filter_by_currency(transactions, "USD")
-    for _ in range(3):
-        print(next(usd_transactions))
-
-    descriptions = transaction_descriptions(transactions)
-    for _ in range(5):
-        print(next(descriptions))
-
-    for card_number in card_number_generator(1, 5):
-        print(card_number)
+    # usd_transactions = filter_by_currency(transactions_empty, "USD")
+    # print(usd_transactions)
+    # for _ in range(3):
+    #     print(next(usd_transactions))
+    #
+    # descriptions = transaction_descriptions(transactions)
+    # for _ in range(5):
+    #     print(next(descriptions))
+    #
+    # for card_number in card_number_generator(1, 5):
+    #     print(card_number)
+    print(filter_by_currency(transactions_empty, "USD"))

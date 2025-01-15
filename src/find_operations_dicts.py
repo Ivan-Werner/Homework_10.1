@@ -9,6 +9,7 @@ transactions_path_excel = os.path.join(DATA_DIR, "transactions_excel.xlsx")
 
 operations = get_transactions_from_csv(transactions_path)
 def find_operations_by_description(operations: list, pattern: str) -> list:
+    """Функция возвращает операции, у которых в описании пристутсвует введенная строка"""
     # user_str = input("Введите название банковской операции: ")
     res_list = []
     for i in operations:
@@ -20,6 +21,7 @@ def find_operations_by_description(operations: list, pattern: str) -> list:
 
 
 def operations_count(operations: list) -> dict:
+    """Функция """
     operations_list = []
     for operation in operations:
         for k, v in operation.items():

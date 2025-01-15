@@ -3,6 +3,7 @@ from src.masks import get_mask_account, get_mask_card_number
 
 def mask_account_card(bank_info: str) -> str:
     """Маскирует вводимые данные по номерам карта и счетов"""
+    global result
     number = ''
     text = ''
     for i in bank_info:

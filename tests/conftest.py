@@ -146,3 +146,6 @@ def test_df():
     return pd.DataFrame(test_dict)
 
 
+@pytest.fixture
+def pattern_tested():
+    return "Перевод организации"

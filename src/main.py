@@ -38,22 +38,23 @@ def main():
         result_file = get_transactions_from_xlsx(transactions_path_excel)
         print(result_file)
 
-
-    user_status = input("Введите статус, по которому необходимо выполнить фильтрацию.\n"
-          "Доступные для фильтровки статусы: EXECUTED, CANCELED, PENDING\n").lower()
-    while user_status not in ("executed", "canceled", "pending"):
+    print("Введите статус, по которому необходимо выполнить фильтрацию.\n"
+          "Доступные для фильтровки статусы: EXECUTED, CANCELED, PENDING")
+    user_status = input()
+    while user_status.lower() not in ("executed", "canceled", "pending"):
         user_status = input(f"Статус операции {user_status} недоступен\n")
 
-    if user_status == "executed":
-        result_file = filter_by_state(result_file, user_status.upper())
+    if user_status.lower() == "executed":
         print('Операции отфильтрованы по статусу "EXECUTED"')
+        result_file = filter_by_state(result_file, user_status.upper())
+
         print(result_file)
-    elif user_status == "canceled":
+    elif user_status.lower() == "canceled":
         result_file = filter_by_state(result_file, user_status.upper())
         print('Операции отфильтрованы по статусу "CANCELED"')
         print(result_file)
-    elif user_status == "pending":
-        filtered_file = filter_by_state(result_file, user_status.upper())
+    elif user_status.lower() == "pending":
+        result_file = filter_by_state(result_file, user_status.upper())
         print('Операции отфильтрованы по статусу "PENDING"')
         print(result_file)
 
@@ -93,6 +94,7 @@ def main():
             print(f"{mask_account_card(transaction['to'])} -> {mask_account_card(transaction['from'])}")
         else:
             print(f"{mask_account_card(transaction['to'])}")
+            
         print(f"Сумма: {transaction['operationAmount']["amount"]}")
 
 
@@ -110,11 +112,14 @@ def main():
 
 if __name__ == '__main__':
     # print(filter_by_status(source_file))
-    main()
-    # print(len(main(result_file)))
-
     # for i in main():
     #     print(i)
+    # print(main())
+    main()
+
+
+
+
 
 
 
