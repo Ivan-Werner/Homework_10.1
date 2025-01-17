@@ -1,8 +1,9 @@
-from masks import get_mask_account, get_mask_card_number
+from src.masks import get_mask_account, get_mask_card_number
 
 
 def mask_account_card(bank_info: str) -> str:
     """Маскирует вводимые данные по номерам карта и счетов"""
+    global result
     number = ''
     text = ''
     for i in bank_info:
@@ -24,5 +25,7 @@ def get_date(date: str) -> str:
     return result
 
 
-# print(mask_account_card('Счет 35383033474447895560'))
-# print(get_date('2024-03-11T02:26:18.671407'))
+if __name__ == '__main__':
+    print(mask_account_card('Счет 76145988629288763144'))
+
+    print(get_date('2024-03-11T02:26:18.671407'))
